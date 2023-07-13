@@ -1,0 +1,7 @@
+require("config.basic")
+require("config.lazy")
+require("config.colorscheme")
+require("config.keymap")
+require("config.lspconfig")
+require("config.dapconfig")
+require("config.completion")
