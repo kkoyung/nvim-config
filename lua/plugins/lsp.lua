@@ -27,8 +27,20 @@ return {
       "nvim-lua/plenary.nvim",
       "mfussenegger/nvim-dap",
     },
-    -- config = true,
-    -- Delay setup to dapconfig.lua
+    config = function ()
+      -- Setup for codelldb
+      -- https://github.com/simrat39/rust-tools.nvim/wiki/Debugging#codelldb-a-better-debugging-experience
+      local codelldb_root = require("mason-registry").get_package("codelldb"):get_install_path() .. "/extension/"
+      local codelldb_path = codelldb_root .. "adapter/codelldb"
+      local liblldb_path = codelldb_root .. "lldb/lib/liblldb.so"
+      local opts = {
+        dap = {
+          adapter = require('rust-tools.dap').get_codelldb_adapter(
+            codelldb_path, liblldb_path)
+        }
+      }
+      require('rust-tools').setup(opts)
+    end
   },
 
   -- Texlab helper
