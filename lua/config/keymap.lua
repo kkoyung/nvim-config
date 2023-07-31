@@ -198,3 +198,18 @@ keymap("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>",     default("Tel
 keymap("n", "<leader>zI", "<cmd>Telekasten insert_img_link<CR>",    default("Telekasten insert_img_link"))
 -- Call insert link automatically when we start typing a link
 keymap("i", "[[",         "<cmd>Telekasten insert_link<CR>",        default("Telekasten insert_link"))
+
+-- ########## Spectre ##########
+--
+keymap('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>',
+    default("Spectre Toggle")
+)
+keymap('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>',
+    default("Spectra search current word")
+)
+keymap('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>',
+    default("Spectre search current word")
+)
+keymap('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
+    default("Spectre search on current file")
+)
