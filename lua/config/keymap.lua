@@ -213,3 +213,12 @@ keymap('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>',
 keymap('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>',
     default("Spectre search on current file")
 )
+
+-- ########## Trouble ##########
+--
+keymap("n", "<leader>xx", function() require("trouble").open() end,                        default("Trouble open"))
+keymap("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end, default("Trouble open workspace"))
+keymap("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end,  default("Trouble open document"))
+keymap("n", "<leader>xq", function() require("trouble").open("quickfix") end,              default("Trouble open quickfix"))
+keymap("n", "<leader>xl", function() require("trouble").open("loclist") end,               default("Trouble open loclist"))
+keymap("n", "gR", function() require("trouble").open("lsp_references") end,                default("Trouble open references"))
