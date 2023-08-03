@@ -146,9 +146,12 @@ keymap('n', '<leader>gD', vim.lsp.buf.declaration,     default("LSP declaration"
 keymap('n', '<leader>gd', vim.lsp.buf.definition,      default("LSP definition"))
 keymap('n', 'K',          vim.lsp.buf.hover,           default("LSP hover"))
 keymap('n', '<leader>gi', vim.lsp.buf.implementation,  default("LSP implementation"))
+keymap('n', '<leader>D',  vim.lsp.buf.type_definition, default("LSP type_definition"))
+keymap({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, default("LSP code_action"))
 keymap('n', '<leader>lf', function()
   vim.lsp.buf.format { async = true }
 end,                                                   default("LSP format"))
+
 
 -- ########## DAP ##########
 --
