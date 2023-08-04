@@ -22,12 +22,21 @@ return {
     config = true,
   },
 
-  { "rmagatti/auto-session",
+  {
+    "rmagatti/auto-session",
     opts = {
-      auto_session_suppress_dirs = { "~/", "/"},
+      auto_session_suppress_dirs = { "~/", "/" },
     }
   },
 
-  { "numToStr/Comment.nvim", config = true },
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      mappings = {
+        basic = false,
+        extra = false,
+      }
+    }
+  },
   -- { "m4xshen/hardtime.nvim", event = "VeryLazy", opts = {} },
 }

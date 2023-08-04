@@ -95,8 +95,8 @@ keymap("n", "<leader>fb", "<cmd> Telescope buffers <CR>",      default("Telescop
 -- See: `:h comment.keybindings`
 local comment_api = require('Comment.api')
 local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
-keymap("n", "<leader>c", comment_api.toggle.linewise.current, default("Comment current"))
-keymap('x', '<leader>c', function()
+keymap("n", "<leader>cc", comment_api.toggle.linewise.current, default("Comment current"))
+keymap('x', '<leader>cc', function()
   vim.api.nvim_feedkeys(esc, 'nx', false)
   comment_api.toggle.linewise(vim.fn.visualmode())
 end, default("Comment visual block"))
