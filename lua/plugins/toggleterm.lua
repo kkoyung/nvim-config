@@ -12,7 +12,7 @@ return {
         end
       end,
       terminal_mappings = true,
-      direction = 'horizontal',
+      direction = 'float',
     },
   },
 }
