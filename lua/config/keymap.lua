@@ -222,7 +222,7 @@ keymap('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_
 
 -- ########## Trouble ##########
 --
-keymap("n", "<leader>xx", function() require("trouble").open() end,                        default("Trouble open"))
+keymap("n", "<leader>xx", function() require("trouble").toggle() end,                      default("Trouble open"))
 keymap("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end, default("Trouble open workspace"))
 keymap("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end,  default("Trouble open document"))
 keymap("n", "<leader>xq", function() require("trouble").open("quickfix") end,              default("Trouble open quickfix"))
