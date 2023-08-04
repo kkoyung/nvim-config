@@ -127,9 +127,12 @@ function Lazygit_toggle()
 end
 keymap("n", "<leader>gz", "<cmd>lua Lazygit_toggle()<CR>", default("Git lazygit"))
 keymap("n", "<leader>gl", "<cmd>Flogsplit<CR>",            default("Git log graph"))
-keymap("n", "<leader>gd", "<cmd>DiffviewOpen<CR>",         default("Git diffview open"))
-keymap("n", "<leader>gc", "<cmd>DiffviewClose<CR>",        default("Git diffview close"))
-keymap("n", "<leader>gh", "<cmd>DiffviewFileHistory<CR>",  default("Git diffview history"))
+
+-- ########## Diffview ##########
+--
+keymap("n", "<leader>dv", "<cmd>DiffviewOpen<CR>",         default("Diffview open"))
+keymap("n", "<leader>dc", "<cmd>DiffviewClose<CR>",        default("Diffview close"))
+keymap("n", "<leader>dh", "<cmd>DiffviewFileHistory<CR>",  default("Diffview history"))
 
 -- ########## Diagnostic ##########
 --
