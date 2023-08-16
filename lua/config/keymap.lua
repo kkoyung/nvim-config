@@ -50,14 +50,15 @@ keymap("n", "<leader>br", "<cmd> BufferLineCloseRight <CR>", default("Buffer clo
 
 -- ########## Windows ##########
 --
-keymap("n", "<C-h>", "<C-w>h", default("Windows focus left"))
-keymap("n", "<C-j>", "<C-w>j", default("Windows focus below"))
-keymap("n", "<C-k>", "<C-w>k", default("Windows focus above"))
-keymap("n", "<C-l>", "<C-w>l", default("Windows focus right"))
-keymap("n", "<C-Up>",    ":resize -2<CR>",          default("Windows resize up"))
-keymap("n", "<C-Down>",  ":resize +2<CR>",          default("Windows resize down"))
-keymap("n", "<C-Left>",  ":vertical resize -2<CR>", default("Windows resize left"))
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", default("Windows resize right"))
+-- keymap("n", "<C-h>", "<C-w>h", default("Windows focus left"))
+-- keymap("n", "<C-j>", "<C-w>j", default("Windows focus below"))
+-- keymap("n", "<C-k>", "<C-w>k", default("Windows focus above"))
+-- keymap("n", "<C-l>", "<C-w>l", default("Windows focus right"))
+-- keymap("n", "<C-Up>",    ":resize -2<CR>",          default("Windows resize up"))
+-- keymap("n", "<C-Down>",  ":resize +2<CR>",          default("Windows resize down"))
+-- keymap("n", "<C-Left>",  ":vertical resize -2<CR>", default("Windows resize left"))
+-- keymap("n", "<C-Right>", ":vertical resize +2<CR>", default("Windows resize right"))
+-- Handled by tmux.nvim plugin
 
 -- ########## Tab page ##########
 --
