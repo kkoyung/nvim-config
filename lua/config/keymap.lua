@@ -59,6 +59,11 @@ keymap("n", "<C-Down>",  ":resize +2<CR>",          default("Windows resize down
 keymap("n", "<C-Left>",  ":vertical resize -2<CR>", default("Windows resize left"))
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", default("Windows resize right"))
 
+-- ########## Tab page ##########
+--
+keymap("n", "<C-y>",      "<cmd>tabprev<CR>",  default("Tabpage previous"))
+keymap("n", "<C-u>",      "<cmd>tabnext<CR>",  default("Tabpage next"))
+
 -- ########## NvimTree ##########
 --
 keymap("n", "<C-n>",     "<cmd> NvimTreeToggle <CR>", default("NvimTree toggle"))
